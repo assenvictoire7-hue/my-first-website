@@ -147,7 +147,7 @@ DOCTYPE <html>
                 cursor: none;
             }
             .cursor{
-                position:fixed with: 12px; height:12px
+                position:fixed with; 12pX; height:12px
                 background:var(--green-neon);border-raduis:50%;
                 pointer-events:none;z-index:9999 ;
                 transition: transform 0.15s ease, width 0.3s,height o.3s;
@@ -184,9 +184,81 @@ DOCTYPE <html>
     .logo-icon{
         width:32px; background: var(--green-neon);
         border-radius:8px;display:grid;place-items:center;
-        color:var(--green-mid);font-size: ;
+        color:var(--green-mid);font: size 16px; ;
     }
+    .logo span{color:var(--green-neon);}
+    nav ul{ display:flex;gap:40px;list-style:none;}
+    nav ul{display: flex;gap:40px;list-style;none;}
+    nav ul a{
+        text decoration:none;color rgba(248,242,228,0.6);
+        font-size:0.75rem; letter-spacing: 0.12em;
+        text-transform: uppercase;transition: color 0.3s;
+    }
+    nav ul a:hover{ color:var(--green-neon);}
+    .nav-cta{
+        background:var(--green-neon);col:var(--green-deep)!important;
+    padding: 10px 22px; border-radius: 4px;font-weight:500;
+transition:background 0.3s,transform 0.2s!impotant;
 }
+.nav-cta:hover{background:var(--cream)!Important;transform:tranlate Y(-1px);}
+.hero{
+    min height: 100vh;display:grid;grid-template-colums:1fr 1fr;
+    position:relative;overflow:hidden;padding-top: 80px;
+}important
+.hero-bg{
+    position:absolute;inset:0;
+    background:
+    radial-gradient(ellipse 80% 60% at 70% 50%,rgba(45,158,72,00.15s)0%transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%,rgba(92,255,122,0.07)0%,transparent 60%);
+    }
+    .hero-grid{
+        position:absolute;inset:0;
+        background-image:
+        linea-gradient(rgba(92,255,122,0.04)1px,transparent 1px);
+        background-image:
+        linear-gradient(rgba(92,255,122,0.44) 1px,transparent 1px);
+        background: size 60px;
+        animation:gridDrift 20s linear infinite;
+    }
+    @keyframes gridDrift{
+        0%{transform translate(0,0);}
+        100%{transform:translate(60px,60px);}
+    }
+    .hero-left{
+        display:flex;flex-direction:column;justify-content:center;
+        padding: 80px 60px 80px 80px;position:relative;z-index: index 2;
+}
+.hero-badge{
+    display:inline-flex;align-items: center;gap:8px;
+    background:rgba(92,255,122,0.1);border:1px solid rgba(92,255,122,0.25);
+    }
+    .hero-badge{
+        display:inline-flex; align-items: center;gap: 8px;
+        background:rgba(92,255,122,0.1);border: 1px; solid rgba(92,255,122,0.25);
+        border-radius: 100PX;padding:6px 16px;font-size:0.7rem;
+        letter spacing:O.15em;text-transform:uppercase;color:var(--green-neon);
+        margin: bottom 32px;width:fit-content;
+        animation:fadeSlideUp 0.8s ease both;
+}
+.hero-badge{
+    display: inline-flex;align-items: center; gap:8X;
+    background:(rgba(92,255,122,0.1);1px solid rgba(92,255,122,0.25);
+    border-raduis:100px;padding:6px; font-size: 0.7rem;
+    letter-spacing:0.51em;text-transform:uppercase;color:var(--green-neon);
+    margin: buttom 32px;width:fit-content;
+    animation:fadeSlideUp 0.8s ease both;
+}
+.badge-dot{
+    width: 6px;height:6px;background:var(--green-neon);
+    border-radius: 50%; animation:pulse 2s ease infinite;
+}
+.badge-dot{
+    width: 6px;height:6px;background: var(--green-neon);
+    border-radius: 50%;animation:pulse 2s ease infinite;
+    }
+    @keyframes pulse{
+        
+    }
                 
             </style>
         </head>
