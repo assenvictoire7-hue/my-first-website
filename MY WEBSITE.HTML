@@ -162,9 +162,31 @@ DOCTYPE <html>
              }
                 body::before {0
                     content:" ;position:fixed;inset:0;
-                    background-image: url("data:image/svg+xml,%3Csvg view BOx
+                    background-image: url("data:image/svg+xml,%3Csvg view BOx='0'0 256,256'
+                    xmlms='http:/www.w3.org/2000/svg'%3E%3Cfilters id='noise'%3E%3CfeTurbulence
+                    type='fractalNoise'baseFrequency='0.9'numOctaves='4'
+                    stitchTiles='stitch'%3E%3C/filter%3E%3Crect width='100%25'height='100%25'
+                    filter='url(%23noise)' opacity: 0.5;
                 } 
-
+                nav{
+                    position:fixed; top 0;left0;right 0;z-index 900;
+                    padding: 24px 48px;display: flex;align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1pxsolid rgbda(>!92,225,12,0.88);
+                    ::backdrop-filter:blur(20px);background:rgba(10,46,15,0.7);
+}
+.logo{
+    font-family: var(---font-display);font-weight:900;font size: 1.4rem;
+    letter-spacing:-0.02em; color: var(--green-neon);
+    border-raduis:8px; display:grid;place-items:center;
+    color: var(--green-deep);font-size: 16px;
+    }
+    .logo-icon{
+        width:32px; background: var(--green-neon);
+        border-radius:8px;display:grid;place-items:center;
+        color:var(--green-mid);font-size: ;
+    }
+}
                 
             </style>
         </head>
