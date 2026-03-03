@@ -435,8 +435,97 @@ important
     font-family: var(---font-display);
     font-size: 2.2em;
 }
+.stat-num{
+    font-family: var(---font-display);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color:var(---green-neon);
+    line-height: 1;
+}
+.stat-label{
+    font-family: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color:rgba(248,242,228,0.4);
+    margin-top: 4px;
+}
+.hero-right{
+    position: relative;
+    z-index:2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:80px 60 px;
+}
+field-viz{
+    position:relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+}
+.field-ring{
+    position: absoliute;
+    inset:0%;
+    border-radius: 50%;
+    border:1px solid rgba(92,255,122,0.15);
+    animation:ringRotate 20s linear infinite;
+}
+ .field-ring:nth-child(2) {
+    inset:10%;
+    border-radius: rgba(92,255,122,0.2);
+    animation: duration 15s;
+    animation-direction: reverse;
 
-
+}
+.field-ring:nth-child(3){
+    inset:20%;
+    border-color: rgba(92,255,122,0.3);
+    animation-duration: 10s;
+}
+@keyframes ringRotate{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+.field-center{
+    position:absolute;
+    inset: 30%;
+    background:radial-gradient(circle,rgba(92,255,122,0.2)0%,rgba(45,158,72,0.1)50%,transparent)
+    border-radius 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation:breathe 4s ease infinite;
+}
+@keyframes breathe{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+}
+.field-icon{
+    font-size: 3rem;
+}
+.data-point{
+    position: absolute;
+    background:rgba(10,46,15,0.9);
+    border:1px solid rgba(92,255,122,0.3);
+    border-radius: 8px;
+    padding:10px 14px;
+    font: size 0.65rem;
+    letter-spacing: 0.08em;
+    backdrop-filter: blur(10px);
+    animation:floatPoint 6s ease infinite;
+}
+.data-point .dp-val{
+    font-family: var(---font-display);
+    font-size: 1.2rem;
+      font-weight: 700;
+       color: var(--green-neon);
+        display: block;
+}
+:root{
+    --green-neon:#5cff7a;
+    --green-deep:#071a0c;
+    --
+}
                 
             </style>
         </head>
