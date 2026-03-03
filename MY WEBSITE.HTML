@@ -524,7 +524,23 @@ field-viz{
 :root{
     --green-neon:#5cff7a;
     --green-deep:#071a0c;
-    --
+    --green-mid:#2d9e48;
+    --cream:#f8f2e4;
+    --font-display:'Obitron',sans-serif;
+    --font-mono:'Space Mono',monospace;
+}
+Global ::-webkit-search-results-decoration
+::before
+::after{
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    margin: 0;
+    background:var(--green-deep);
+    color:var(--cream)
 }
                 
             </style>
