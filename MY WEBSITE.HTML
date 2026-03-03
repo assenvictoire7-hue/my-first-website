@@ -147,64 +147,129 @@ DOCTYPE <html>
                 cursor: none;
             }
             .cursor{
-                position:fixed with; 12pX; height:12px
-                background:var(--green-neon);border-raduis:50%;
+                position:fixed;
+                 width: 200px;
+                height: 20px;
+                background-color: green;
+                border-radius: 50%;
+                pointer-events: none;
+                 }
+                 .cursor::after{
+                    content: "";
+                    position:absolute;
+                    width: 40px;
+                    height:40px;
+                    border:2px solid green;
+                    border-radius: 50%;
+                 }
+          .cursor { background:var(--green-neon);
+                 border-radius:50%;
                 pointer-events:none;z-index:9999 ;
                 transition: transform 0.15s ease, width 0.3s,height o.3s;
-                transform: translate(-50%,-50%)
-            }
+                transform: translate(-50%,-50%)}
+            
             .cursor-ring {
-                Position:fixed;width:40px;height: 40px;
-                border:1px solid rgba(92,255,122,0.4);border-raduis: 50%;
-                pointer-events:none;z-index:9984;
-                tranform:translate(-50%,-50%);
+                Position:fixed;
+                width:40px;
+                height: 40px;
+                border:1px solid rgba(3, 17, 5, 0.4);
+                border-radius: 50%;
+                pointer-events:none;
+                z-index:9984;
+                transform:translate(-50%,-50%);
                 transition:transform 0.08s ease,width 0.3s,border-color 0.3s;
              }
-                body::before {0
-                    content:" ;position:fixed;inset:0;
-                    background-image: url("data:image/svg+xml,%3Csvg view BOx='0'0 256,256'
-                    xmlms='http:/www.w3.org/2000/svg'%3E%3Cfilters id='noise'%3E%3CfeTurbulence
+                body::before {
+                    content:"";
+                    position:fixed;
+                    inset:0;/* top:0; right:0; bottom:0; left:0; */
+                    pointer-events: none;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.05; /* very subtle */
+    z-index: 9999;
+    }
+    
+                   
+                xmlns="http://www.w3.org/2000/svg'%3E%3Cfilters id='noise'%3E%3CfeTurbulence
                     type='fractalNoise'baseFrequency='0.9'numOctaves='4'
                     stitchTiles='stitch'%3E%3C/filter%3E%3Crect width='100%25'height='100%25'
                     filter='url(%23noise)' opacity: 0.5;
-                } 
+                  
                 nav{
-                    position:fixed; top 0;left0;right 0;z-index 900;
-                    padding: 24px 48px;display: flex;align-items: center;
+                    position:fixed;
+                     top:0;
+                     left:0;
+                     right:0;
+                     z-index:900;
+                    padding: 24px 48px;
+                    display: flex;
+                    align-items: center;
                     justify-content: space-between;
-                    border-bottom: 1pxsolid rgbda(>!92,225,12,0.88);
-                    ::backdrop-filter:blur(20px);background:rgba(10,46,15,0.7);
+                    border-bottom: 1px solid rgba(92,225,12,0.88);
+                    backdrop-filter:blur(20px);
+                  background:rgba(10,46,15,0.7);
 }
 .logo{
-    font-family: var(---font-display);font-weight:900;font size: 1.4rem;
-    letter-spacing:-0.02em; color: var(--green-neon);
-    border-raduis:8px; display:grid;place-items:center;
-    color: var(--green-deep);font-size: 16px;
+    font-family: var(---font-display);
+    font-weight:900;
+    font-size: 1.4rem;
+    letter-spacing:-0.02em; 
+    color: var(--green-neon);
+    border-radius:8px; 
+    display:grid;
+    place-items:center;
+    color: var(--green-deep);
+    font-size: 16px;
     }
     .logo-icon{
         width:32px; background: var(--green-neon);
         border-radius:8px;display:grid;place-items:center;
         color:var(--green-mid);font: size 16px; ;
     }
-    .logo span{color:var(--green-neon);}
-    nav ul{ display:flex;gap:40px;list-style:none;}
-    nav ul{display: flex;gap:40px;list-style;none;}
-    nav ul a{
-        text decoration:none;color rgba(248,242,228,0.6);
+    .logo span{
+        color:var(--green-neon);
+    }
+
+    nav ul{ 
+        display:flex;
+        gap:40px;
+        list-style:none; 
+        text-decoration:none;
+        color: rgba(248,242,228,0.6);
         font-size:0.75rem; letter-spacing: 0.12em;
         text-transform: uppercase;transition: color 0.3s;
     }
-    nav ul a:hover{ color:var(--green-neon);}
+
+    nav ul a{
+        text-decoration: none ;
+        color:rgba(248,242,228,0.6);
+        font-size:0.75rem;
+         letter-spacing: 0.12em;
+        text-transform: uppercase;transition: color 0.3s;
+    }
+
     .nav-cta{
-        background:var(--green-neon);col:var(--green-deep)!important;
-    padding: 10px 22px; border-radius: 4px;font-weight:500;
-transition:background 0.3s,transform 0.2s!impotant;
+        background:var(--green-neon);
+        color:var(--green-deep)!important;
+    padding: 10px 22px; 
+    border-radius: 4px;
+    font-weight:500;
+    transition: back-ground 0.3s, transform 0.2s !important;
+
 }
-.nav-cta:hover{background:var(--cream)!Important;transform:tranlate Y(-1px);}
-.hero{
-    min height: 100vh;display:grid;grid-template-colums:1fr 1fr;
-    position:relative;overflow:hidden;padding-top: 80px;
-}important
+.nav-cta:hover{
+    background:var(--cream)!Important;
+    transform:tranlate Y(-1px);
+}
+.hero {
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    position:relative;
+    overflow:hidden;
+    padding-top: 80px;
+}
+important
 .hero-bg{
     position:absolute;inset:0;
     background:
@@ -221,8 +286,11 @@ transition:background 0.3s,transform 0.2s!impotant;
         animation:gridDrift 20s linear infinite;
     }
     @keyframes gridDrift{
-        0%{transform translate(0,0);}
-        100%{transform:translate(60px,60px);}
+        0% {
+            translate: (0,0);
+        }
+        100% {transform: translate(60px,60px);
+        }
     }
     .hero-left{
         display:flex;flex-direction:column;justify-content:center;
@@ -232,25 +300,28 @@ transition:background 0.3s,transform 0.2s!impotant;
     display:inline-flex;align-items: center;gap:8px;
     background:rgba(92,255,122,0.1);border:1px solid rgba(92,255,122,0.25);
     }
-    .hero-badge{
-        display:inline-flex; align-items: center;gap: 8px;
-        background:rgba(92,255,122,0.1);border: 1px; solid rgba(92,255,122,0.25);
-        border-radius: 100PX;padding:6px 16px;font-size:0.7rem;
-        letter spacing:O.15em;text-transform:uppercase;color:var(--green-neon);
-        margin: bottom 32px;width:fit-content;
-        animation:fadeSlideUp 0.8s ease both;
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(92, 255, 122, 0.1);
+    border: 1px solid rgba(92, 255, 122, 0.25);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-neon);
+    margin-bottom: 32px;
+    width: fit-content;
+    animation: fadeSlideUp 0.8s ease both;
 }
-.hero-badge{
-    display: inline-flex;align-items: center; gap:8X;
-    background:(rgba(92,255,122,0.1);1px solid rgba(92,255,122,0.25);
-    border-raduis:100px;padding:6px; font-size: 0.7rem;
-    letter-spacing:0.51em;text-transform:uppercase;color:var(--green-neon);
-    margin: buttom 32px;width:fit-content;
-    animation:fadeSlideUp 0.8s ease both;
-}
-.badge-dot{
-    width: 6px;height:6px;background:var(--green-neon);
-    border-radius: 50%; animation:pulse 2s ease infinite;
+    .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--green-neon);
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
 }
 .badge-dot{
     width: 6px;height:6px;background: var(--green-neon);
@@ -260,38 +331,112 @@ transition:background 0.3s,transform 0.2s!impotant;
         0%,100%{opacity:1;transform:scale(1);}
         50%{opacity:0.5;transform:scale(0.7);}
 }
-.hero-title{font-family: var(--font-display)font-size:clamp(3.5rem,6vw,6rem);
-font: weight 900;line-height:0.95;letter: spacing -0.3em;
-margin-bottom:28px;animation:fadeSlideUp 0.8s 0.1s ease both;
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.3em;
+    margin-bottom: 28px;
+    animation: fadeSlideUp 0.8s 0.1s ease both;
 }
-.hero-title em{font-style: italic;color: var(--green-neon);font-weight: 300;}
-.hero-sub{
-    font-size: 0.9em;line-height: 1.8;color: rgba(248,242,228,0.55);
-    max-width: 420px;margin-bottom: 48px;
-    animation:fadeSlideUp 0.8s 0.3s ease both;
+
+.hero-title em {
+    font-style: italic;
+    color: var(--green-neon);
+    font-weight: 300;
 }
-.btn-primary{
-    back-ground:var(green-neon);color:var(--green-deep);boder:none;
-    padding:  16px 36px;font-family: var(---font-mono);font-size: 0.8rem;
-    font-weight: 500;letter-spacing: 0.08em;text-transform: uppercase;
-    border-radius: 4px;cursor: none;
-    transition: transform 0.2s,box-shadow 0.2s;
-    text-decoration: none;display: inline-block;
+    .hero-sub {
+    font-size: 0.9em;
+    line-height: 1.8;
+    color: rgba(248, 242, 228, 0.55);
+    max-width: 420px;
+    margin-bottom: 48px;
+    animation: fadeSlideUp 0.8s 0.3s ease both;
 }
-.btn-primary:hover{transform,translate Y(-2px);box-shadow: 0 8px 30px rgba(92,255,122,0.35);}
-.btn-ghost{
-    background:transparent;color-var(--cream);
-    border:1px solid rgba(248,242,228,0.2);padding: 15px 32px
-    font-family:var(--font-mono);font-size;0.8rem;
-    letter: spacing 0.08em;text-transform:uppercase; border: raduis 4px;
-    cursor:none; transition:border-color 0.3s,color 0.3s;
-    text-decoration:none;display:inline-block;
+.btn-primary {
+    background: var(--green-neon);
+    color: var(--green-deep);
+    border: none;
+    padding: 16px 36px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
-.btn-ghost:hover{ border-color:var(--green-neon);color:var(--green-neon);}
+
+/* Primary button hover */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(92, 255, 122, 0.35);
+}
+
+/* Ghost button */
+.btn-ghost {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(248, 242, 228, 0.2);
+    padding: 15px 32px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ghost:hover {
+    border-color: var(--green-neon);
+    color: var(--green-neon);
+}
+
+/* Hero stats section */
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(248, 242, 228, 0.2);
+    padding: 15px 32px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s,color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ghost:hover {
+    border-color: var(--green-neon);
+    color: var(--green-neon);
+
+}
 .hero-stats{
-    display-flex;gap: 40 px;margin-top: 64px; padding-top: 40px;
-    border: top 1px;solid 
+    display: flex;
+    gap: 40px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border: top 1px solid rgba(248,242,228,0.08);
+    animation: fladeSlideUp 0.8s 0.4s ease both;
 }
+.stat-num{
+    font-family: var(---font-display);
+    font-size: 2.2em;
+}
+
+
                 
             </style>
         </head>
