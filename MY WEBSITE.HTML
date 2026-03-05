@@ -668,10 +668,50 @@ ROTATING RINGS
         position:absolute;
         top:0;
         left:0;
-        right
-     }
+        right:0;
+        height:2px;
+        background:linear-gradient(90deg,transparent,var(--green-neon),transparent);
+        transform:scaleX(0);
+        transition:transform 0.4s ease;
 
-            </style>
+     }
+     .feature-card:hover::before{
+        transform:scaleX(1);
+     }
+     Animations;
+     @keyframes ringRotate {
+        to {transform:rotate(360deg);}
+     }
+     @keyframes breathe{
+        0%,100%{transform:translateY(0px);}
+        50%{transform:translateY(-10px);}
+     }
+     Mobile Responsive;
+
+     @media(max-width:768px);
+        .hero{
+            flex-direction:column;
+             }
+            text-align:center{
+                padding: 60px 5%;
+            };
+            
+     .hero-right{
+    margin-top: 40px;
+}
+      .field-viz{
+    max-width: 320px;
+}   
+      .stat-num{
+    font-size: 1.6rem;
+}     
+      .btn-primary{
+    padding-primary{
+        padding:14px 24px;
+        font-size: 0.75rem;
+    }
+}   
+</style>
         </head>
     </html>
 
