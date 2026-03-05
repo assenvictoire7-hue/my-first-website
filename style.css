@@ -1,121 +1,256 @@
-/* General Reset */
+:root {
+    --primary-pink: #ff8fb1;   
+    --secondary-cream: #fff0f5; 
+    --text-color: #000000;      
+    --bg-color: #ffffff;        
+    --font-sans: 'Arial', sans-serif;
+}
+
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body */
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-  background: #fff0f5; /* soft pink/cream */
-  color: #000000;       /* black text */
+    font-family: var(--font-sans);
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Navigation */
+
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    z-index: 1000;
+    border-bottom: 1px solid var(--secondary-cream);
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #000000;
+nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text-color);
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #000000;
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Hero */
+nav ul li a:hover {
+    color: var(--primary-pink);
+}
+
 #hero {
-  height: 150px; /* spacing at top */
-  background: #fff0f5; /* same pink background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Sections */
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: var(--primary-pink);
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--secondary-cream);
+    color: var(--primary-pink);
+}
+
+
+.ai-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ring {
+    position: absolute;
+    border: 2px solid var(--primary-pink);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.ring2 {
+    width: 200px;
+    height: 200px;
+    animation-duration: 15s;
+}
+
+.ring3 {
+    width: 300px;
+    height: 300px;
+    animation-duration: 20s;
+}
+
+.ring, .ring2, .ring3 {
+    width: 100px;
+    height: 100px;
+}
+
+.center-ai {
+    position: relative;
+    font-size: 2rem;
+    color: var(--primary-pink);
+}
+
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 section {
-  padding: 100px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #fff0f5; /* ensure all sections pink */
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1, h2, h3 {
-  color: #000000;
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-pink);
 }
 
-/* Features Cards */
+section p, section li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .card {
-  flex: 1 1 220px;
-  background: #ffe4e1; /* lighter pink */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: var(--secondary-cream);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Forms */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 143, 177, 0.3);
+}
+
+.card h3 {
+    color: var(--primary-pink);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-color);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 form button {
-  background: #ff69b4;
-  color: #000000;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+    background: var(--primary-pink);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
 }
 
 form button:hover {
-  background: #ff1493;
+    transform: translateY(-2px);
+    background: var(--secondary-cream);
+    color: var(--primary-pink);
 }
 
-/* Footer */
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #fff0f5;
-  color: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--secondary-cream);
+    color: var(--text-color);
 }
 
-/* Responsive */
-@media(max-width:768px){
-  .features {
-    flex-direction: column;
-  }
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
 }
