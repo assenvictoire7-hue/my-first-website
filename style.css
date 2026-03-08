@@ -1,21 +1,28 @@
 :root {
-    --primary-pink: #ff8fb1;   
-    --secondary-cream: #fff0f5; 
-    --text-color: #000000;      
-    --bg-color: #ffffff;        
+    --primary-green: #915f84;  
+    --secondary-cream: #b8a2b3;
+    --text-color: #0c0e0c;      
+    --bg-color: #fcfcfcef;        
     --font-sans: 'Arial', sans-serif;
 }
+h1{
+    color: green;
+}
 
-
+h2{
+    color: green;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
+
 
 body {
     font-family: var(--font-sans);
@@ -23,6 +30,8 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
+
+
 
 
 nav {
@@ -37,17 +46,20 @@ nav {
     border-bottom: 1px solid var(--secondary-cream);
 }
 
+
 nav .logo {
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
+
 
 nav ul li a {
     text-decoration: none;
@@ -56,9 +68,11 @@ nav ul li a {
     transition: color 0.3s;
 }
 
+
 nav ul li a:hover {
     color: var(--primary-pink);
 }
+
 
 #hero {
     display: flex;
@@ -72,17 +86,20 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+
 #hero h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
+
 #hero p {
     font-size: 1.1rem;
     max-width: 600px;
     margin-bottom: 30px;
 }
+
 
 .btn {
     background: var(--primary-pink);
@@ -94,11 +111,14 @@ nav ul li a:hover {
     transition: transform 0.3s, background 0.3s;
 }
 
+
 .btn:hover {
     transform: translateY(-3px);
     background: var(--secondary-cream);
-    color: var(--primary-pink);
+    color: var(--primary-green);
 }
+
+
 
 
 .ai-visual {
@@ -109,6 +129,7 @@ nav ul li a:hover {
     pointer-events: none;
 }
 
+
 .ring {
     position: absolute;
     border: 2px solid var(--primary-pink);
@@ -116,11 +137,13 @@ nav ul li a:hover {
     animation: rotate 10s linear infinite;
 }
 
+
 .ring2 {
     width: 200px;
     height: 200px;
     animation-duration: 15s;
 }
+
 
 .ring3 {
     width: 300px;
@@ -128,16 +151,20 @@ nav ul li a:hover {
     animation-duration: 20s;
 }
 
+
 .ring, .ring2, .ring3 {
     width: 100px;
     height: 100px;
 }
 
+
 .center-ai {
     position: relative;
     font-size: 2rem;
-    color: var(--primary-pink);
+    color: var(--primary-green);
 }
+
+
 
 
 @keyframes rotate {
@@ -146,11 +173,14 @@ nav ul li a:hover {
 }
 
 
+
+
 section {
     padding: 80px 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 section h2 {
     font-size: 2rem;
@@ -159,15 +189,19 @@ section h2 {
     color: var(--primary-pink);
 }
 
+
 section p, section li {
     font-size: 1rem;
     margin-bottom: 15px;
     color: var(--text-color);
 }
 
+
 ul, ol {
     margin-left: 20px;
 }
+
+
 
 
 .features {
@@ -177,6 +211,7 @@ ul, ol {
     justify-content: center;
     margin-top: 30px;
 }
+
 
 .card {
     background: var(--secondary-cream);
@@ -188,19 +223,24 @@ ul, ol {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(255, 143, 177, 0.3);
 }
+
 
 .card h3 {
     color: var(--primary-pink);
     margin-bottom: 10px;
 }
 
+
 .card p {
     color: var(--text-color);
 }
+
+
 
 
 form {
@@ -211,12 +251,14 @@ form {
     margin: 0 auto;
 }
 
+
 form input, form textarea {
     padding: 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1rem;
 }
+
 
 form button {
     background: var(--primary-pink);
@@ -229,11 +271,13 @@ form button {
     transition: transform 0.3s, background 0.3s;
 }
 
+
 form button:hover {
     transform: translateY(-2px);
     background: var(--secondary-cream);
     color: var(--primary-pink);
 }
+
 
 footer {
     text-align: center;
@@ -241,6 +285,8 @@ footer {
     background: var(--secondary-cream);
     color: var(--text-color);
 }
+
+
 
 
 @media (max-width: 768px) {
@@ -254,3 +300,14 @@ footer {
         align-items: center;
     }
 }
+
+
+.image-center{
+text-align:center;
+}
+
+
+.image-center img{
+width:400px;
+}
+
