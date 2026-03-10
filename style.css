@@ -14,8 +14,8 @@ a{
 }
 
 :root {
-    --primary-green: #915f84;  
-    --secondary-cream: #b8a2b3;
+    --primary-green: green;  
+    --secondary-cream: #31b631;
     --text-color: #0c0e0c;      
     --bg-color: #fcfcfcef;        
     --font-sans: 'Arial', sans-serif;
@@ -90,8 +90,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
-    padding: 100px 20px;
+    padding: 2rem 1rem;
     position: relative;
     overflow: hidden;
 }
@@ -271,7 +270,7 @@ form input, form textarea {
 
 
 form button {
-    background: var(--primary-pink);
+    background: var(--primary-green);
     color: var(--bg-color);
     padding: 12px 20px;
     border: none;
@@ -285,7 +284,6 @@ form button {
 form button:hover {
     transform: translateY(-2px);
     background: var(--secondary-cream);
-    color: var(--primary-pink);
 }
 
 
@@ -322,8 +320,13 @@ width:400px;
 }
 
 .imageAI-center{
+    background: url('./Images/AI\ pictures.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    width: 400px;
+    width: auto;
+    height: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
