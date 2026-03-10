@@ -1,2 +1,3 @@
-# my-first-website
-Attempt at Webdev
+# AgriSHEild AI
+AgriSHEild AI is an AI-powered climate-smart agriculture platform designed to help smallholder farmers — particularly young women and girls — adapt to climate change and increase crop yields in Cameroon. Founded by a young Cameroonian girl who dropped out of school due to financial hardship, the platform addresses critical challenges including climate variability, pest outbreaks, poor soil management, and gender barriers in agriculture.
+The mobile-first solution delivers hyperlocal weather forecasts, AI-based pest detection, soil health diagnostics, and yield predictions through SMS and voice advisories in local languages — making it accessible even in off-grid areas. Over three years, AgriSHEild AI aims to onboard 10,000 farmers, boost yields by 30–50%, and economically empower 5,000 young women. Aligned with SDGs 2, 5, 8, and 13, it combines artificial intelligence, climate science, and social impact into one inclusive platform — turning today's girl farmers into tomorrow's climate leaders.
